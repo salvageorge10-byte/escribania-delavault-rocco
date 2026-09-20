@@ -1,8 +1,5 @@
 # Escribanía Delavault — Rocco · «Protocolo»
 
-Rediseño completo del sitio. Reemplaza a
-`delavault-rocco-editorial.salvadorgeorgedelava.chatgpt.site`.
-
 Sitio estático. Se abre directo con `index.html`, sin build ni dependencias.
 Para verlo servido:
 
@@ -11,63 +8,87 @@ python -m http.server 5173
 # http://127.0.0.1:5173
 ```
 
+En producción: **https://escribania-delavault-rocco.vercel.app**
+
 ---
 
 ## Dirección visual
 
-**Una sola idea: la página está compuesta como un protocolo notarial encuadernado.**
-
-- Ocho **folios** numerados en romanos, con el número al margen izquierdo.
-- **Filetes finos** en lugar de cajas: casi no hay cards en el sitio.
-- La **paleta salió de los materiales reales de la escribanía**, no de una
-  paleta genérica de estudio jurídico: el pergamino y el granate de los lomos
-  de sus propios protocolos, la tinta de su sello, el bronce del cuño.
+**La página está compuesta como un protocolo notarial encuadernado.**
+La paleta no salió de un catálogo de estudios jurídicos: está muestreada de los
+materiales reales de la escribanía —el pergamino y el granate de los lomos de sus
+propios protocolos, la tinta de su sello, el bronce del cuño.
 
 | Token | Hex | De dónde sale |
 |---|---|---|
 | `--vellum` | `#F3EEE4` | pergamino de los lomos |
-| `--vellum-2` | `#EAE3D5` | papel de protocolo, fondo de folios pares |
+| `--vellum-2` | `#EAE3D5` | papel de protocolo |
 | `--tinta` | `#14130F` | negro del sello sobre papel |
-| `--borgona` | `#6B1E22` | granate de las tapas de los protocolos |
-| `--laton` / `--laton-claro` | `#9A7B41` / `#C2A268` | cuño de bronce y letras doradas |
+| `--borgona` | `#6B1E22` | granate de las tapas |
+| `--laton` / `--laton-claro` | `#765B2C` / `#C2A268` | cuño de bronce y letras doradas |
 
 **Tipografía**
 
-- **Spectral** (Production Type) — display, peso 300 con su itálica propia.
-  Un serif diseñado para *documento en pantalla*: encaja con la idea de
-  protocolo y evita tanto los sospechosos de siempre (Playfair, Cormorant)
-  como los display que hoy se repiten en toda web generada por IA.
+- **Spectral** (Production Type) — display, peso 300 con su itálica propia. Un
+  serif diseñado para *documento en pantalla*. Evita tanto los sospechosos de
+  siempre (Playfair, Cormorant) como los display que hoy se repiten en toda web
+  generada por IA.
 - **Archivo** (Omnibus-Type, fundición de Buenos Aires) — texto, rótulos e
   interfaz. Elegida a propósito: tipografía argentina para una escribanía
   argentina.
 
 Todos los titulares llevan el salto de línea decidido a mano (`<br>`), con
-`text-wrap: pretty` para que el balanceo automático no los vuelva a partir
-donde no corresponde.
+`text-wrap: pretty` para que el balanceo automático no los vuelva a partir donde
+no corresponde.
 
 ---
 
-## Estructura
+## Las tres decisiones de composición
 
-| Folio | Sección | Composición |
+**1 · Una columna vertebral.** Cada folio abre con un filete a ancho completo que
+integra el romano, el nombre del folio y una nota al margen derecho
+(`I — LA ESCRIBANÍA … REGISTRO 456`). Es lo único que cruza la página entera, y
+por eso es lo que la ordena. Reemplazó a los dos sistemas que convivían antes: un
+romano suelto flotando en el margen y un rótulo con cuadradito.
+
+**2 · Contraste de escala.** Cada folio tiene un solo elemento dominante y el
+resto acompaña. Antes todas las fotos eran medianas y estaban estacionadas a la
+derecha, así que el ojo nunca encontraba ritmo.
+
+| Folio | Dominante | Acompaña |
 |---|---|---|
-| — | Portada | foto a sangre + titular bajo a la izquierda, registro 456 como nota al margen, índice del protocolo al pie |
-| I | La escribanía | texto a la izquierda, protocolos reales a sangre a la derecha, el sello montado como muestra de papel |
-| II | Actos notariales | lista de seis actos; en escritorio la lámina de la derecha cambia al recorrer la lista, en mobile cada acto muestra su propia fotografía |
-| III | Compraventa | fotografía a sangre que se funde con el fondo; texto montado encima |
-| IV | Las escribanas | fotografía corrida al margen derecho, los dos nombres en display con sus iniciales grabadas |
-| V | Cómo trabajamos | cuatro pasos como marginalia, dos fotografías desfasadas |
-| VI | La Plata | panorámica a sangre con la dirección y el Museo montados encima |
-| VII | Preguntas | cuatro preguntas, dos detalles arquitectónicos |
-| VIII | Consulta | cierre grande con todos los datos de contacto |
+| I · La escribanía | fotografía de los protocolos, a sangre a la derecha | texto, ficha de datos, el sello como muestra de papel montada encima |
+| II · Actos notariales | la lámina, que ocupa media página y cambia al recorrer la lista | los seis actos como lista tipográfica |
+| III · Compraventa | banda a sangre que se funde con el fondo | texto montado sobre el degradado, secuencia de cuatro pasos |
+| IV · Las escribanas | **la tipografía**: los dos nombres a escala de display | cargos, iniciales grabadas, nota de matrícula |
+| V · Cómo trabajamos | fotografía del escritorio, alta y a sangre | cuatro pasos como marginalia, pluma como nota al pie |
+| VI · La Plata | panorámica del Pasaje Dardo Rocha | dirección y Museo montados encima |
+| VII · Preguntas | la lista de preguntas | portón de acceso, vertical |
+| VIII · Consulta | banda de cierre a sangre | statement y datos de contacto en dos columnas |
 
-Se reordenó respecto del sitio anterior: **institución → actos → compraventa →
-quiénes → cómo → dónde → dudas → contacto**. La compraventa subió cerca del
-inicio porque es el acto que más consultas genera, y se eliminaron los bloques
-que explicaban dos veces lo mismo (institución / registro / protocolo / principios
-pasaron a ser un solo folio).
+**3 · Tres movimientos de fondo, no un damero.** Pergamino para los folios de
+enunciado, pergamino tostado para los de secuencia, tinta para los de peso.
+Compraventa y escribanas comparten **un único bloque oscuro continuo**: así la
+sección de las escribanas hereda el peso de la anterior en vez de ser otra franja
+más. Se pasó de ocho alternancias de fondo a cuatro, y cada una significa algo.
 
-**Texto:** ~60 % menos que el sitio anterior. Máximo un párrafo corto por bloque.
+**Cadencia de espaciado.** Escala base 4 (`--e1`…`--e10`) y tres alturas de folio:
+`--folio-y-l` para el que abre un movimiento, `--folio-y` normal, `--folio-y-s`
+para el que continúa una secuencia.
+
+---
+
+## Mobile (375–430 px)
+
+No es el escritorio apilado:
+
+- Las láminas de los seis actos van **a sangre**, de borde a borde: la lista se
+  recorre como una secuencia de imágenes, no como una pila de tarjetas.
+- La columna vertebral de folios se mantiene, con la nota al margen oculta.
+- Los nombres de las escribanas ocupan el ancho completo, con filete horizontal.
+- La secuencia de compraventa pasa de grilla a lista.
+- Las fichas de contacto abandonan las dos columnas y apilan rótulo sobre dato.
+- Blanco táctil mínimo de 44 px en los controles.
 
 ---
 
@@ -75,8 +96,8 @@ pasaron a ser un solo folio).
 
 Todos los datos son los reales de la escribanía. **No hay nada inventado:** ni
 testimonios, ni métricas, ni años de trayectoria, ni precios, ni retratos de las
-escribanas (no hay fotos reales de ellas, así que la sección se resuelve con
-tipografía en vez de con stock).
+escribanas —no existen fotos reales de ellas, así que esa sección se resuelve con
+tipografía en vez de con stock.
 
 - Registro N.º 456 · Distrito Notarial de La Plata
 - Magalí E. Delavault (Notaria Titular) · Florencia Rocco (Notaria Adscripta)
@@ -89,22 +110,23 @@ tipografía en vez de con stock).
 
 ## Fotografía
 
-**21 imágenes, todas distintas, ninguna repetida entre secciones.** Ninguna
-generada por IA.
+**16 fotografías, todas distintas, ninguna repetida entre secciones y ninguna
+generada por IA.** Todas llevan epígrafe, recortadas y viradas hacia la paleta,
+en WebP: 2,0 MB el set completo.
 
-Se descartaron las imágenes stock del sitio anterior (manos sosteniendo una casita
-de juguete, alguien escribiendo en un anotador). Las que quedaron:
-
-- **Propias de la escribanía:** su sello con el Registro 456 y sus protocolos
+- **Propias de la escribanía:** su sello con el Registro 456, sus protocolos
   encuadernados.
-- **La Plata (Wikimedia Commons):** interior y fachada del Pasaje Dardo Rocha,
+- **La Plata (Wikimedia Commons):** interior y esquina del Pasaje Dardo Rocha,
   pórtico del Museo de La Plata.
 - **Material notarial y arquitectura (Unsplash):** lacre, firmas al pie, cuño
-  sobre texto legal, manuscrito antiguo, fichero de consulta, libro de registro,
-  llaves en la cerradura, escalera de piedra, capitel jónico, interior de estudio.
+  sobre texto legal, manuscrito antiguo, legajos atados, llaves en la cerradura,
+  escritorio con lámpara, pluma sobre papel, portón de acceso, nave abovedada.
 
-Todas las fotos llevan epígrafe. Todas recortadas y viradas hacia la paleta,
-exportadas a WebP: **2,3 MB el set completo.**
+Se descartaron por genéricas, ajenas o mal integradas: el fichero de madera
+naranja (fuera de paleta), el libro de registro rotulado en inglés, la sala de
+lectura que leía como club londinense, la fachada plana con cartelería, la
+escalera anodina y el capitel suelto. La bóveda de galería salió porque quedaba
+pegada a la nave del cierre y las dos se leían como la misma foto.
 
 ---
 
@@ -114,28 +136,28 @@ exportadas a WebP: **2,3 MB el set completo.**
 otro rubro? No:
 
 - La paleta está muestreada de los protocolos y el sello de *esta* escribanía.
-- La numeración por folios en romanos al margen replica un protocolo notarial:
-  en una inmobiliaria o un restaurante no significa nada.
-- El 456 funciona como marca gráfica recurrente (nota al margen en la portada,
-  rótulo de la cabecera, cierre del colofón).
-- El anclaje geográfico es el Pasaje Dardo Rocha y el Museo de La Plata, no
-  arquitectura genérica.
+- La foliación en romanos sobre filete replica un protocolo notarial: en una
+  inmobiliaria o un restaurante no significa nada.
+- El 456 funciona como marca gráfica recurrente: nota al margen en la portada,
+  rótulo de cabecera, nota de folio, cierre del colofón.
+- El anclaje geográfico es el Pasaje Dardo Rocha y el Museo de La Plata.
 - Los seis actos no son íconos: son seis fotografías de material notarial real.
 
-**2 · Referencia.** Ninguna sección quedó por debajo del resto. La más floja era
-el FAQ; se redujo de cinco preguntas a cuatro y se le sumó el par de detalles
-arquitectónicos para cerrar la composición.
+**2 · Referencia.** La sección más floja era la de las escribanas —un título, una
+foto prestada y una tabla de dos nombres. Ahora es el folio de mayor peso
+tipográfico de la página y no usa ninguna fotografía.
 
 ---
 
 ## Técnico
 
-- HTML + CSS + JS sin dependencias ni build. 1 archivo CSS, 1 archivo JS.
-- Grilla de 12 columnas con margen de folio; composiciones asimétricas en cada
-  sección.
+- HTML + CSS + JS sin dependencias ni build. Un archivo CSS, un archivo JS.
+- Grilla de 12 columnas con medianil propio (`--calle`); composiciones
+  asimétricas y filas declaradas a mano donde el orden del DOM lo pedía.
 - **Sin animaciones de scroll.** Sólo hover, foco, cambio de lámina en los actos
   y el acordeón. Respeta `prefers-reduced-motion`.
-- Contraste verificado: **todo el texto pasa WCAG AA** (mínimo medido 4,75:1).
-- Sin desbordes horizontales en 390 / 834 / 1440 px.
+- Contraste verificado en los 17 pares de texto/fondo del sitio: **todos pasan
+  WCAG AA**, mínimo medido 4,75:1.
+- Sin desbordes horizontales en 375 / 390 / 430 / 834 / 1440 px.
 - Sin errores de consola. Todas las imágenes con `alt`, `width` y `height`.
 - Datos estructurados `schema.org/Notary`.
