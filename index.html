@@ -162,14 +162,10 @@
 
 <!-- ══ I · LA ESCRIBANÍA ═══════════════════════════════════════════ -->
 <section class="folio apertura" id="folio-1">
-
-  <header class="folio__marca">
-    <span class="folio__n">I</span>
-    <span class="folio__t">La escribanía</span>
-    <span class="folio__m">Registro 456</span>
-  </header>
+  <span class="folio__num" aria-hidden="true">I</span>
 
   <div class="apertura__texto">
+    <p class="rotulo">La escribanía</p>
     <h2 class="t-display">El registro 456,<br>en el centro<br>de la ciudad.</h2>
     <p class="parrafo">
       Magalí Delavault y Florencia Rocco ejercen la función notarial bajo el Registro
@@ -197,15 +193,11 @@
 
 <!-- ══ II · ACTOS NOTARIALES ═══════════════════════════════════════ -->
 <section class="folio actos" id="folio-2" data-actos>
-
-  <header class="folio__marca">
-    <span class="folio__n">II</span>
-    <span class="folio__t">Actos notariales</span>
-    <span class="folio__m">Seis actos</span>
-  </header>
+  <span class="folio__num" aria-hidden="true">II</span>
 
   <header class="actos__cabecera">
-    <h2 class="t-display">Seis actos.<br>Un mismo<br><em>registro.</em></h2>
+    <p class="rotulo">Actos notariales</p>
+    <h2 class="t-display">Seis actos.<br>Un mismo <em>registro.</em></h2>
     <p class="actos__nota">La documentación que corresponde a cada uno se define en la consulta.</p>
   </header>
 
@@ -325,12 +317,7 @@
 
 <!-- ══ III · COMPRAVENTA ═══════════════════════════════════════════ -->
 <section class="folio compraventa" id="folio-3">
-
-  <header class="folio__marca">
-    <span class="folio__n">III</span>
-    <span class="folio__t">Compraventa</span>
-    <span class="folio__m">Inmuebles</span>
-  </header>
+  <span class="folio__num folio__num--claro" aria-hidden="true">III</span>
 
   <picture class="compraventa__foto">
     <source media="(max-width: 759px)" srcset="images/compraventa-llaves-alto.webp">
@@ -338,6 +325,7 @@
   </picture>
 
   <div class="compraventa__caja">
+    <p class="rotulo rotulo--claro">Compraventa de inmuebles</p>
     <h2 class="t-display t-display--m">¿Está por comprar<br>o vender<br><em>una propiedad?</em></h2>
     <p class="parrafo parrafo--claro">
       Antes de firmar conviene revisar títulos, condiciones y plazos. Cuéntenos en qué
@@ -359,13 +347,17 @@
 
 <!-- ══ IV · LAS ESCRIBANAS ═════════════════════════════════════════ -->
 <section class="folio escribanas" id="folio-4">
-  <header class="folio__marca">
-    <span class="folio__n">IV</span>
-    <span class="folio__t">Las escribanas</span>
-    <span class="folio__m">Titular y adscripta</span>
+  <span class="folio__num" aria-hidden="true">IV</span>
+
+  <header class="escribanas__cabecera">
+    <p class="rotulo">Las escribanas</p>
+    <h2 class="t-display">Dos firmas<br>sobre el mismo<br><em>registro.</em></h2>
   </header>
 
-  <h2 class="t-display escribanas__titulo">Dos firmas<br>sobre el mismo<br><em>registro.</em></h2>
+  <figure class="escribanas__foto">
+    <img src="images/estudio-interior.webp" alt="Sala de trabajo revestida en madera oscura, con una mesa larga, lámpara de brazos y ventanales calados." width="1600" height="1200" loading="lazy" decoding="async">
+    <figcaption>Interior de estudio</figcaption>
+  </figure>
 
   <ul class="titulares">
     <li>
@@ -381,22 +373,18 @@
   </ul>
 
   <p class="escribanas__nota">
-    Ambas matriculadas en el Colegio de Escribanos de la Provincia de Buenos Aires
-    y habilitadas para autorizar los mismos actos dentro del Registro N.º 456.
+    Ambas matriculadas en el Colegio de Escribanos de la Provincia de Buenos Aires y
+    habilitadas para autorizar los mismos actos dentro del Registro N.º 456.
   </p>
 </section>
 
 
 <!-- ══ V · CÓMO TRABAJAMOS ═════════════════════════════════════════ -->
 <section class="folio proceso" id="folio-5">
-
-  <header class="folio__marca">
-    <span class="folio__n">V</span>
-    <span class="folio__t">Cómo trabajamos</span>
-    <span class="folio__m">Cuatro pasos</span>
-  </header>
+  <span class="folio__num" aria-hidden="true">V</span>
 
   <header class="proceso__cabecera">
+    <p class="rotulo">Cómo trabajamos</p>
     <h2 class="t-display t-display--m">De la consulta<br>al <em>protocolo.</em></h2>
   </header>
 
@@ -423,12 +411,12 @@
     </li>
   </ol>
 
-  <figure class="proceso__foto proceso__foto--principal">
-    <img src="images/estudio-escritorio.webp" alt="Escritorio de madera con una lámpara encendida, un teléfono antiguo y papeles, en penumbra." width="1200" height="1500" loading="lazy" decoding="async">
-    <figcaption>Escritorio de trabajo</figcaption>
+  <figure class="proceso__foto proceso__foto--libro">
+    <img src="images/registro-libro.webp" alt="Libro de registro abierto, con asientos manuscritos en tinta a lo largo de dos páginas." width="1500" height="1050" loading="lazy" decoding="async">
+    <figcaption>Asientos de un libro de registro</figcaption>
   </figure>
 
-  <figure class="proceso__foto proceso__foto--nota">
+  <figure class="proceso__foto proceso__foto--pluma">
     <img src="images/pluma-escritura.webp" alt="Plumín de una estilográfica trazando una palabra en tinta negra sobre papel." width="1600" height="1060" loading="lazy" decoding="async">
     <figcaption>Pluma sobre papel</figcaption>
   </figure>
@@ -437,19 +425,15 @@
 
 <!-- ══ VI · LA PLATA ═══════════════════════════════════════════════ -->
 <section class="folio ciudad" id="folio-6">
-
-  <header class="folio__marca">
-    <span class="folio__n">VI</span>
-    <span class="folio__t">La Plata</span>
-    <span class="folio__m">Calle 48</span>
-  </header>
+  <span class="folio__num folio__num--claro" aria-hidden="true">VI</span>
 
   <figure class="ciudad__panoramica">
-    <img src="images/la-plata-pasaje.webp" alt="Esquina del Pasaje Dardo Rocha en La Plata, con su fachada academicista y los tilos de la vereda." width="2200" height="1200" loading="lazy" decoding="async">
+    <img src="images/la-plata-fachada.webp" alt="Fachada del Pasaje Dardo Rocha sobre la vereda, con sus arcadas y la hilera de tilos sin hojas." width="2000" height="1150" loading="lazy" decoding="async">
     <figcaption>Pasaje Dardo Rocha, calle 50</figcaption>
   </figure>
 
   <div class="ciudad__caja">
+    <p class="rotulo rotulo--claro">La Plata</p>
     <h2 class="t-display t-display--m">Calle&nbsp;48&nbsp;<em>N.º&nbsp;845</em></h2>
     <p class="parrafo parrafo--claro">Piso 3.º · Oficina B — entre calles 11 y 12.<br>Lunes a viernes, de 8 a 17 h, con turno previo.</p>
     <a class="btn btn--vellum" href="https://www.google.com/maps/search/?api=1&query=Calle+48+845,+La+Plata,+Buenos+Aires,+Argentina" target="_blank" rel="noopener">
@@ -466,14 +450,10 @@
 
 <!-- ══ VII · PREGUNTAS ═════════════════════════════════════════════ -->
 <section class="folio preguntas" id="folio-7">
-
-  <header class="folio__marca">
-    <span class="folio__n">VII</span>
-    <span class="folio__t">Preguntas</span>
-    <span class="folio__m">Cuatro respuestas</span>
-  </header>
+  <span class="folio__num" aria-hidden="true">VII</span>
 
   <header class="preguntas__cabecera">
+    <p class="rotulo">Antes de la consulta</p>
     <h2 class="t-display t-display--m">Cuatro<br>respuestas<br><em>útiles.</em></h2>
   </header>
 
@@ -497,65 +477,65 @@
   </div>
 
   <figure class="preguntas__foto">
-    <img src="images/porton-acceso.webp" alt="Portón de madera labrada de doble hoja, con vidrios emplomados, bajo un arco de piedra tallada." width="1000" height="1280" loading="lazy" decoding="async">
-    <figcaption>Portón de acceso</figcaption>
+    <img src="images/boveda-galeria.webp" alt="Galería abovedada de un edificio público, con arcos encalados y lámparas esféricas colgantes." width="1600" height="1150" loading="lazy" decoding="async">
+    <figcaption>Galería abovedada</figcaption>
   </figure>
 
+  <figure class="preguntas__detalle">
+    <img src="images/capitel.webp" alt="Capitel jónico de piedra blanca, con sus volutas y el fuste acanalado bajo la cornisa." width="900" height="900" loading="lazy" decoding="async">
+    <figcaption>Capitel jónico</figcaption>
+  </figure>
 </section>
 
 
 <!-- ══ VIII · CONSULTA ═════════════════════════════════════════════ -->
 <section class="folio consulta" id="folio-8">
-  <picture class="consulta__banda">
-    <source media="(max-width: 759px)" srcset="images/cierre-nave-alto.webp">
-    <img src="images/cierre-nave.webp" alt="Nave abovedada de piedra clara con la luz entrando de frente al fondo del pasillo." width="2200" height="1150" loading="lazy" decoding="async">
-  </picture>
-
-  <header class="folio__marca">
-    <span class="folio__n">VIII</span>
-    <span class="folio__t">Consulta</span>
-    <span class="folio__m">Lun a vie, 8 a 17 h</span>
-  </header>
+  <span class="folio__num folio__num--claro" aria-hidden="true">VIII</span>
 
   <div class="consulta__texto">
+    <p class="rotulo rotulo--claro">Consulta</p>
     <h2 class="t-display">Cuéntenos<br>qué trámite<br><em>necesita.</em></h2>
     <p class="parrafo parrafo--claro">No hace falta saber el nombre técnico del acto. Con una descripción breve alcanza para orientarlo.</p>
 
     <a class="btn btn--vellum btn--grande" href="https://wa.me/5492215681943?text=Hola%2C%20me%20comunico%20desde%20la%20web%20de%20la%20Escriban%C3%ADa%20Delavault%20%E2%80%94%20Rocco.%20Quisiera%20realizar%20una%20consulta." target="_blank" rel="noopener">
       Escribir por WhatsApp<span class="btn__flecha" aria-hidden="true">→</span>
     </a>
+
+    <ul class="contacto">
+      <li>
+        <span class="contacto__lbl">WhatsApp</span>
+        <a href="https://wa.me/5492215681943" target="_blank" rel="noopener">+54 9 221 568-1943</a>
+      </li>
+      <li>
+        <span class="contacto__lbl">Teléfono</span>
+        <a href="tel:+542215273469">(0221) 527-3469</a>
+      </li>
+      <li>
+        <span class="contacto__lbl">Email</span>
+        <a href="mailto:escribania.delavault.rocco@hotmail.com">escribania.delavault.rocco<wbr>@hotmail.com</a>
+      </li>
+      <li>
+        <span class="contacto__lbl">Dirección</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Calle+48+845,+La+Plata,+Buenos+Aires,+Argentina" target="_blank" rel="noopener">Calle 48 N.º 845 · Piso 3.º Of. B<br>La Plata, Buenos Aires</a>
+      </li>
+      <li>
+        <span class="contacto__lbl">Horario</span>
+        <span class="contacto__dato">Lunes a viernes, 8 a 17 h</span>
+      </li>
+      <li>
+        <span class="contacto__lbl">Redes</span>
+        <span class="contacto__dato">
+          <a href="https://www.instagram.com/escribania.delavault.rocco/" target="_blank" rel="noopener">Instagram</a> ·
+          <a href="https://www.facebook.com/profile.php?id=100065015980498" target="_blank" rel="noopener">Facebook</a>
+        </span>
+      </li>
+    </ul>
   </div>
 
-  <ul class="contacto">
-    <li>
-      <span class="contacto__lbl">WhatsApp</span>
-      <a href="https://wa.me/5492215681943" target="_blank" rel="noopener">+54 9 221 568-1943</a>
-    </li>
-    <li>
-      <span class="contacto__lbl">Teléfono</span>
-      <a href="tel:+542215273469">(0221) 527-3469</a>
-    </li>
-    <li>
-      <span class="contacto__lbl">Email</span>
-      <a href="mailto:escribania.delavault.rocco@hotmail.com">escribania.delavault.rocco<wbr>@hotmail.com</a>
-    </li>
-    <li>
-      <span class="contacto__lbl">Dirección</span>
-      <a href="https://www.google.com/maps/search/?api=1&query=Calle+48+845,+La+Plata,+Buenos+Aires,+Argentina" target="_blank" rel="noopener">Calle 48 N.º 845 · Piso 3.º Of. B<br>La Plata, Buenos Aires</a>
-    </li>
-    <li>
-      <span class="contacto__lbl">Horario</span>
-      <span class="contacto__dato">Lunes a viernes, 8 a 17 h</span>
-    </li>
-    <li>
-      <span class="contacto__lbl">Redes</span>
-      <span class="contacto__dato">
-        <a href="https://www.instagram.com/escribania.delavault.rocco/" target="_blank" rel="noopener">Instagram</a> ·
-        <a href="https://www.facebook.com/profile.php?id=100065015980498" target="_blank" rel="noopener">Facebook</a>
-      </span>
-    </li>
-  </ul>
-
+  <figure class="consulta__foto">
+    <img src="images/escalera-piedra.webp" alt="Tramo curvo de una escalera de piedra clara, con el volumen del murete girando hacia la luz." width="1000" height="1300" loading="lazy" decoding="async">
+    <figcaption>Escalera de acceso</figcaption>
+  </figure>
 </section>
 
 </main>
